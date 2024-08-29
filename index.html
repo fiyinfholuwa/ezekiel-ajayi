@@ -24,6 +24,99 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+<style>
+    @media (max-width: 768px) {
+        .s-intro__content-inner {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .s-intro__content-title {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+    
+        .s-intro__content-pretitle {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    
+        .s-intro__content-btns {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .s-intro__social {
+            margin-top: 30px;
+        }
+    
+        .s-intro__social svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    /* Basic styling for the typing effect */
+.typing-effect {
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+#typed-text {
+    font-size: 3rem; 
+    color: black; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.s-intro__content-text {
+    margin-top: 90px; /* Adjust this value to move content up */
+    /* Add other styles as needed */
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+
+@media (max-width: 768px) {
+    .s-intro__content-title {
+        padding: 10px; 
+    }
+
+    #typed-text {
+        font-size: 3rem; 
+        color: white;
+        margin-top: 20px; 
+        display: block; 
+        width: 100%; 
+        text-align: center; 
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 576px) {
+    #typed-text {
+        font-size: 1.25rem; 
+        margin-top: 15px; 
+    }
+}
+
+</style> 
+    
 
 </head>
 
@@ -83,19 +176,16 @@
                 <div class="column lg-12 s-intro__content-inner grid-block grid-16">
                     
                     <div class="s-intro__content-text">
-
                         <div class="s-intro__content-pretitle text-pretitle" style="color: orange;">Hello</div>
                         <h1 class="s-intro__content-title">
-                        I'm Ezekiel Ademola Ajayi <br>
-                        A Visionary Entrepreneur and Philanthropist<br>
-                        </h1>                            
-
+                            I'm Ezekiel Ademola Ajayi.<br>
+                            <span id="typed-text" style="display: inline-block; margin-top: 40px;"></span><br>
+                        </h1>
                         <div class="s-intro__content-btns">
                             <a class="smoothscroll btn" href="#about">More About Me</a>
                             <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
                         </div> <!-- s-intro__content-btns -->   
-
-                    </div> <!-- s-intro__content-text -->                     
+                    </div> <!-- s-intro__content-text -->                                       
                     
                 </div> <!-- s-intro__content-inner -->  
             </div> <!-- s-intro__content -->
@@ -186,94 +276,85 @@
             
         </section> <!-- end s-about -->   
 
-        <!-- # numbers
-        ================================================== -->
-        <section id="skills" class="s-numbers" style="background-color: peachpuff;">
+      <!-- # numbers (Key Competencies)
+================================================== -->
+<section id="skills" class="s-numbers target-section" style="background-color: peachpuff; padding: 50px 0;">
 
-            
-                <div class="section-header" data-num="02">
-                    <h2 class="text-display-title">Key competencies.</h2>
-                </div> <!-- end section-header -->
+    <div class="row s-numbers__content">
+        <div class="column xl-12">
 
-                <div class="row counter-items">
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        1
-                    </div>
-                    <h5>Entrepreneurial Vision and Innovation</h5>
-                    <p>
+            <div class="section-header" data-num="02">
+                <h2 class="text-display-title">Key Competencies.</h2>
+            </div> <!-- end section-header -->
+
+            <div class="grid-list-items s-numbers__blocks" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">1</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Entrepreneurial Vision and Innovation</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         Ability to identify and capitalize on business opportunities. Innovative approach to 
                         problem-solving and business development. Forward-thinking mindset, leading to the 
                         successful establishment of multiple ventures.
                     </p>
                 </div> <!-- end counter-items__item -->
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        2
-                    </div>
-                    <h5>Leadership and Strategic Management</h5>
-                    <p>
+
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">2</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Leadership and Strategic Management</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         Effective leadership of diverse teams across different industries. Strategic planning 
                         and execution in real estate and hospitality sectors. Proven ability to steer companies 
                         toward growth and profitability.
                     </p>
                 </div> <!-- end counter-items__item -->
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        3
-                    </div>
-                    <h5>Philanthropy and Social Responsibility</h5>
-                    <p>
+
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">3</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Philanthropy and Social Responsibility</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         Commitment to giving back through the Ademola Ajayi Foundation. Strong sense of social 
                         responsibility, particularly toward the less privileged and elderly. Ability to lead 
                         and manage charitable initiatives for community impact.
                     </p>
                 </div> <!-- end counter-items__item -->
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        4
-                    </div>
-                    <h5>Real Estate and Hospitality Expertise</h5>
-                    <p>
+
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">4</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Real Estate and Hospitality Expertise</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         In-depth knowledge of the real estate market and investment strategies. Experience in 
                         managing hospitality services with a focus on quality and customer satisfaction. 
                         Competence in navigating and succeeding in highly competitive industries.
                     </p>
                 </div> <!-- end counter-items__item -->
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        5
-                    </div>
-                    <h5>Academic Excellence and Continuous Learning</h5>
-                    <p>
+
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">5</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Academic Excellence and Continuous Learning</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         Strong educational background with an Associate in Arts degree with honors. Dedication 
                         to continuous personal and professional development. Ability to apply academic insights 
                         to practical business scenarios.
                     </p>
                 </div> <!-- end counter-items__item -->
-        
-                <div class="column counter-items__item">
-                    <div class="num">
-                        6
-                    </div>
-                    <h5>Mentorship and Community Leadership</h5>
-                    <p>
+
+                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">6</div>
+                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Mentorship and Community Leadership</h5>
+                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
                         Passion for mentoring and guiding the next generation of entrepreneurs. Ability to 
                         inspire and empower others through sharing knowledge and experiences. Leadership in 
                         fostering a supportive and growth-oriented community.
                     </p>
-                </div> 
-                <!-- end counter-items__item -->
-        
-            </div>
-              <!-- end counter-items -->
-        
-        </section> <!-- end s-numbers -->        
+                </div> <!-- end counter-items__item -->
+
+            </div> <!-- end grid-list-items -->
+
+        </div> <!-- end column -->
+    </div> <!-- end s-numbers__content -->
+
+</section> <!-- end s-numbers -->
+
 
 
         <!-- # footer 
@@ -366,8 +447,8 @@
 
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
-                        <span>© Copyright Hudson 2023</span> 
-                        <span>Design by <a href="https://styleshout.com/">StyleShout</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></span>
+                        <span>© Copyright Ezekiel Ajayi 2024</span> 
+                        <span>Design by <a href="https://styleshout.com/">Daramola Fiyinfoluwa</a>
                     </p>
                 </div>
 
@@ -389,6 +470,44 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const texts = [
+        "A Visionary Entrepreneur and Philanthropist",
+        "A real estate investor and serial entrepreneur"
+    ];
+    const typedTextElement = document.getElementById("typed-text");
+    
+    let currentTextIndex = 0;
+    let index = 0;
+    let typingSpeed = 100; 
+    let erasingSpeed = 50; 
+    let pauseTime = 1500; 
+    
+    function typeText() {
+        if (index < texts[currentTextIndex].length) {
+            typedTextElement.innerHTML += texts[currentTextIndex].charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed);
+        } else {
+            setTimeout(eraseText, pauseTime);
+        }
+    }
+    
+    function eraseText() {
+        if (index > 0) {
+            typedTextElement.innerHTML = texts[currentTextIndex].substring(0, index - 1);
+            index--;
+            setTimeout(eraseText, erasingSpeed);
+        } else {
+            currentTextIndex = (currentTextIndex + 1) % texts.length;
+            setTimeout(typeText, typingSpeed);
+        }
+    }
+    
+    typeText();
+});
+</script>    
 
 </body>
 </html>
