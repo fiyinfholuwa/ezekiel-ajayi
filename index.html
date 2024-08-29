@@ -115,6 +115,40 @@
     }
 }
 
+/* General Styles */
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.attention-getter {
+    font-size: 2rem; 
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .about-banner {
+        flex: 1;
+        padding-right: 20px;
+    }
+    
+    .about-banner-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .about-text {
+        flex: 2;
+    }
+}
+
 </style> 
     
 
@@ -243,42 +277,42 @@
         </section> <!-- end s-intro -->
 
 
-        <!-- # about
+      <!-- # about
 ================================================== -->
 <section id="about" class="s-about target-section" style="background-color: lightyellow;">
-
     <div class="row s-about__content">
         <div class="column xl-12">    
-            
             <div class="section-header" data-num="01">
                 <h2 class="text-display-title">About Me.</h2>
             </div> <!-- end section-header -->
 
-                        <!-- Image Banner -->
+            <div class="about-content">
+                <!-- Image Banner -->
                 <div class="about-banner">
-                     <img src="./images/About image.jpeg" alt="About Me Banner" class="about-banner-image">
-                 </div>
+                    <img src="./images/About image.jpeg" alt="About Me Banner" class="about-banner-image">
+                </div>
 
-            <p class="attention-getter">
-                Ezekiel Ademola Ajayi is a distinguished real estate investor and serial entrepreneur, known for his innovative approach and determination. As the CEO of No Limit Global Link and Windsor Hospitality and Allied Services, Ezekiel has led both companies to remarkable success in the real estate and hospitality industries.
+                <!-- Text Content -->
+                <div class="about-text">
+                    <p class="attention-getter">
+                        Ezekiel Ademola Ajayi is a distinguished real estate investor and serial entrepreneur, known for his innovative approach and determination. As the CEO of No Limit Global Link and Windsor Hospitality and Allied Services, Ezekiel has led both companies to remarkable success in the real estate and hospitality industries.
 
-                With an innate entrepreneurial spirit, Ezekiel has a talent for turning challenges into opportunities. His leadership and strategic business acumen have made him a prominent figure in the business world and an inspiration to aspiring entrepreneurs.
-            </p>
+                        With an innate entrepreneurial spirit, Ezekiel has a talent for turning challenges into opportunities. His leadership and strategic business acumen have made him a prominent figure in the business world and an inspiration to aspiring entrepreneurs.
+                    </p>
 
-            <p class="attention-getter">
-                Ezekiel holds an Associate in Arts degree with honors, reflecting his commitment to excellence in all his endeavors. Beyond his professional achievements, he is the founder of the Ademola Ajayi Foundation, a non-governmental organization dedicated to supporting the less privileged and elderly. His philanthropic work underscores his belief that true success is measured by the positive impact one has on society.
+                    <p class="attention-getter">
+                        Ezekiel holds an Associate in Arts degree with honors, reflecting his commitment to excellence in all his endeavors. Beyond his professional achievements, he is the founder of the Ademola Ajayi Foundation, a non-governmental organization dedicated to supporting the less privileged and elderly. His philanthropic work underscores his belief that true success is measured by the positive impact one has on society.
 
-                Ezekiel is also a lifelong learner and mentor, passionate about sharing his knowledge and experiences with the next generation of entrepreneurs. His journey is a testament to the power of passion, dedication, and leadership in creating lasting change in both the business world and the lives of others.
-            </p>
+                        Ezekiel is also a lifelong learner and mentor, passionate about sharing his knowledge and experiences with the next generation of entrepreneurs. His journey is a testament to the power of passion, dedication, and leadership in creating lasting change in both the business world and the lives of others.
+                    </p>
+                </div>
+            </div>
 
             <div class="grid-list-items s-about__blocks">
-
-
             </div> <!-- grid-list-items -->
 
         </div> <!--end column -->
     </div> <!--end s-about__content -->
-    
 </section> <!-- end s-about -->
 
       <!-- # numbers (Key Competencies)
