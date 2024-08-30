@@ -25,6 +25,32 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 <style>
+
+    /* Default Styles */
+.grid-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Space between cards */
+  justify-content: space-between; /* Aligns cards */
+}
+
+.grid-item {
+  flex: 1 1 100%; /* Full width on smaller screens */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Media Query for screens 425px and wider */
+@media (min-width: 425px) {
+  .grid-item {
+    flex: 1 1 100%; 
+  }
+}
+
     @media (max-width: 768px) {
         .s-intro__content-inner {
             flex-direction: column;
@@ -277,7 +303,7 @@
         </section> <!-- end s-intro -->
 
 
-      <!-- # about
+    <!-- # about
 ================================================== -->
 <section id="about" class="s-about target-section" style="background-color: lightyellow;">
     <div class="row s-about__content">
@@ -315,71 +341,82 @@
     </div> <!--end s-about__content -->
 </section> <!-- end s-about -->
 
-      <!-- # numbers (Key Competencies)
+<style>
+    /* Shorten image height on desktop screens */
+    @media only screen and (min-width: 992px) {
+        .about-banner-image {
+            max-height: 750px; /* Adjust the height as needed */
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+</style>
+
+     <!-- # numbers (Key Competencies)
 ================================================== -->
 <section id="skills" class="s-numbers target-section" style="background-color: peachpuff; padding: 50px 0;">
 
     <div class="row s-numbers__content">
-        <div class="col-md-12 col-lg-6 col-xl-12">
+        <div class="col-md-12 col-lg-12 col-xl-12">
             <div class="section-header" data-num="02">
                 <h2 class="text-display-title">Key Competencies.</h2>
             </div> <!-- end section-header -->
 
             <div class="grid-list-items s-numbers__blocks" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">1</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Entrepreneurial Vision and Innovation</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">1</div>
+                    <h5>Entrepreneurial Vision and Innovation</h5>
+                    <p>
                         Ability to identify and capitalize on business opportunities. Innovative approach to 
                         problem-solving and business development. Forward-thinking mindset, leading to the 
                         successful establishment of multiple ventures.
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">2</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Leadership and Strategic Management</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">2</div>
+                    <h5>Leadership and Strategic Management</h5>
+                    <p>
                         Effective leadership of diverse teams across different industries. Strategic planning 
                         and execution in real estate and hospitality sectors. Proven ability to steer companies 
                         toward growth and profitability.
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">3</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Philanthropy and Social Responsibility</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">3</div>
+                    <h5>Philanthropy and Social Responsibility</h5>
+                    <p>
                         Commitment to giving back through the Ademola Ajayi Foundation. Strong sense of social 
                         responsibility, particularly toward the less privileged and elderly. Ability to lead 
                         and manage charitable initiatives for community impact.
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">4</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Real Estate and Hospitality Expertise</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">4</div>
+                    <h5>Real Estate and Hospitality Expertise</h5>
+                    <p>
                         In-depth knowledge of the real estate market and investment strategies. Experience in 
                         managing hospitality services with a focus on quality and customer satisfaction. 
                         Competence in navigating and succeeding in highly competitive industries.
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">5</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Academic Excellence and Continuous Learning</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">5</div>
+                    <h5>Academic Excellence and Continuous Learning</h5>
+                    <p>
                         Strong educational background with an Associate in Arts degree with honors. Dedication 
                         to continuous personal and professional development. Ability to apply academic insights 
                         to practical business scenarios.
                     </p>
                 </div> <!-- end counter-items__item -->
 
-                <div class="grid-item counter-items__item" style="flex: 1 1 calc(33.333% - 30px); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-                    <div class="num" style="font-size: 48px; font-weight: bold; color: darkorange; margin-bottom: 10px;">6</div>
-                    <h5 style="font-size: 20px; font-weight: 600; color: #333;">Mentorship and Community Leadership</h5>
-                    <p style="font-size: 16px; color: #666; line-height: 1.6;">
+                <div class="grid-item counter-items__item">
+                    <div class="num">6</div>
+                    <h5>Mentorship and Community Leadership</h5>
+                    <p>
                         Passion for mentoring and guiding the next generation of entrepreneurs. Ability to 
                         inspire and empower others through sharing knowledge and experiences. Leadership in 
                         fostering a supportive and growth-oriented community.
@@ -390,6 +427,46 @@
 
         </div> <!-- end column -->
     </div> <!-- end s-numbers__content -->
+</section> <!-- end s-numbers -->
+
+<style>
+    /* General styles for the grid items */
+    .grid-item.counter-items__item {
+        flex: 1 1 calc(33.333% - 30px);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .num {
+        font-size: 48px;
+        font-weight: bold;
+        color: darkorange;
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Media query to make the cards one per row on tablet screens */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .grid-item.counter-items__item {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+
 
 </section> <!-- end s-numbers -->
 
@@ -486,7 +563,6 @@
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
                         <span>© Copyright Ezekiel Ajayi 2024</span> 
-                        <span>Design by <a href="https://styleshout.com/">Daramola Fiyinfoluwa</a>
                     </p>
                 </div>
 
