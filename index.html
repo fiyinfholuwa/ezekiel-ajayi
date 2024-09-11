@@ -170,6 +170,73 @@
     }
 }
 
+
+/* Gallery Section */
+.s-gallery {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.s-gallery__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to zoom in */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Spacing for gallery items */
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+/* Grid layout for different screen sizes */
+@media (max-width: 576px) {
+    .col-12 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .col-sm-6 {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .col-md-4 {
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        max-width: 25%;
+        flex: 0 0 25%;
+    }
+}
+
+
 </style> 
     
 
@@ -443,6 +510,50 @@
     </div> <!-- end s-numbers__content -->
 </section> <!-- end s-numbers -->
 
+<!-- # Image Gallery Section ================================================== -->
+<section id="gallery" class="s-gallery target-section" style="background-color: #f8f9fa; padding: 60px 0;">
+    <div class="container">
+        <div class="row s-gallery__content">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="section-header" data-num="03">
+                    <h2 class="text-display-title">Gallery.</h2>
+                </div> <!-- end section-header -->
+
+                <div class="row grid-list-items s-gallery__blocks justify-content-center">
+                    <!-- Image 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="gallery-item">
+                            <img src="./images/gallery1.jpg" alt="Person Image 1" class="img-fluid rounded">
+                        </div>
+                    </div> <!-- end gallery-item -->
+
+                    <!-- Image 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="gallery-item">
+                            <img src="./images/gallery2.jpg" alt="Person Image 2" class="img-fluid rounded">
+                        </div>
+                    </div> <!-- end gallery-item -->
+
+                    <!-- Image 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="gallery-item">
+                            <img src="./images/gallery3.jpg" alt="Person Image 3" class="img-fluid rounded">
+                        </div>
+                    </div> <!-- end gallery-item -->
+
+                    <!-- Image 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="gallery-item">
+                            <img src="./images/gallery4.jpg" alt="Person Image 4" class="img-fluid rounded">
+                        </div>
+                    </div> <!-- end gallery-item -->
+
+                    <!-- Add more images as needed -->
+                </div> <!-- end grid-list-items -->
+            </div> <!-- end column -->
+        </div> <!-- end s-gallery__content -->
+    </div> <!-- end container -->
+</section> <!-- end s-gallery -->
 <style>
     /* General styles for the grid items */
     .grid-item.counter-items__item {
@@ -492,7 +603,7 @@
 
             <div class="row">
                 <div class="column lg-12">
-                    <div class="section-header light-on-dark" data-num="03">
+                    <div class="section-header light-on-dark" data-num="04">
                         <h2 class="text-display-title">Get In Touch.</h2>
                     </div> <!-- end section-header -->
                 </div>
